@@ -5,7 +5,7 @@ import './App.css'
 import NavigationBar from './navbar'
 import Home from "./pages/Home"
 import About from "./pages/About"
-import  Projects from "./pages/Project"
+import  Projects from "./pages/Projects"
 import  Connect from "./pages/Connect"
 import { Routes, Route, HashRouter } from "react-router-dom";
 
