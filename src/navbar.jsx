@@ -1,18 +1,19 @@
 import './navbar.css'
-import logo from /images/logo.png
+import logo from './images/logo.png'
 
 
 function NavigationBar(){
     return(
            <>
 	           <nav>
-               <li><a href="index.html"><img src = "logo" alt = "logo"></img></a> </li>
+               <li><a href="index.html"><img src = {logo} alt = "logo"/></a> </li>
 
 					     <div>
 					          <ul id = "navbar">
-					               <li><a href="index.html">Home</a> </li>
-					               <li><a href="index.html">Works</a></li>
-					               <li><a href="index.html">Fun</a></li>
+                                   <li><a href= "#/Home">Home</a> </li>
+					               <li><a href= "#/About">About</a> </li>
+					               <li><a href="#/Projects">Projects</a></li>
+					               <li><a href="#/Connect">Connect</a></li>
 					          </ul>
 					     </div>
 					</nav>
