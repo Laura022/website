@@ -1,0 +1,43 @@
+
+.background {
+    position: relative; 
+    max-width: 100%;
+    max-height: 100vh;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease;
+    
+}
+
+.static-background {
+    background-color: blue;  /* Static image */
+  }
+  
+  .gif-background {
+    background-image: url('./homepage.gif');  /* Animated GIF */
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 50%;  /* Position it vertically in the center */
+    left: 50%;  /* Position it horizontally in the center */
+    transform: translate(-50%, -50%); /* Center the button */
+    padding: 1em 2em;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+ 

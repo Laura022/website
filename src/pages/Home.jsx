@@ -1,33 +1,23 @@
-function Home() {
-    const [count, setCount] = useState(0)
-  
-    return (
-      <>
-        <HashRouter>
-        <div>
-        <NavigationBar></NavigationBar>
-        <Routes>
-        <Route path="/" element = {<Home />}/>
-        <Route path="/Home" element = {<Home />}/>
-        <Route path="/About" element = {<About />}/>
-        <Route path="/Projects" element = {<Projects />}/>
-        <Route path="/Connect" element = {<Connect />}/>
-        </Routes>
-        </div>
-        </HashRouter>
-  
-          <h1 id ="Heading">
-            How h1 Looks like
-          </h1>
-          <p id ="Paragraph">
-            This is a paragraph. You can type stuff you want to see here.
-          </p>
-          <p id = "Next">
-            This is used for another paragraph.
-          </p>
-      </>
+import React, {useState, useEffect} from 'react'
+import './Home.css'
+
+
+export default function Home(){
+  const [isGif, setIsGif] = useState(false);  // State to toggle between GIF and static image
+
+  // Function to toggle the background
+  const toggleBackground = () => {
+    setIsGif(prevState => !prevState);  // Toggle the state value
+  };
+
+
+  return (
+    <div className={`background ${isGif ? 'gif-background' : 'static-background'}`}>
+      <button onClick={toggleBackground} className="toggle-button">
+        Toggle Background
+      </button>
+      <h1>Welcome to the Homepage!</h1>
+    </div>
+
     )
-  }
-  
-  export default Home
-  
+}

@@ -6,6 +6,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 9999;
+    
   }
   
   #name {
@@ -15,9 +16,10 @@ nav {
   
   #navbar {
     display: flex;
-    align-items: center;
+    align-items: right;
     justify-content: center;
-    margin-right: 30px;
+    margin-right: 10px;
+    background-color: white;
   }
   
   #navbar li {
@@ -31,4 +33,8 @@ nav {
     font-size: 1.8rem;
     font-weight: 600;
     color: black;
+  }
+
+  #logo{
+    background-color: white;
   }
