@@ -6,7 +6,7 @@ function NavigationBar(){
     return(
            <>
 	           <nav>
-               <li><ul id= "logo"><a href="index.html"><img src = {logo} alt = "logo"/></a></ul> </li>
+               <ul id= "logo"><a href= "#/Home"><img src = {logo} /></a></ul>
 
 					     <div>
 					          <ul id = "navbar">
