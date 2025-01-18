@@ -1,44 +1,55 @@
-
+/* Background styling */
 .background {
-    position: relative; 
-    max-width: 100%;
-    max-height: 100%;
-    padding-top:50%;
-    width: auto;
-    height: auto;
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* Full height of the viewport */
     display: flex;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 0.5s ease;
-    
-}
-
-.static-background {
-    background-color: blue;  /* Static image */
+    align-items: center; /* Center the content vertically and horizontally */
+    background-size: cover;  /* Ensure both background GIFs fill the container */
+    background-position: center;  /* Center the GIF */
+    background-repeat: no-repeat;  /* Prevent the background GIF from repeating */
+    transition: background-image 0.5s ease;  /* Smooth transition when changing GIFs */
   }
   
+  /* Static background (initial GIF) */
+  .static-background {
+    background-image: url('./Move.gif');  /* Static GIF */
+  }
+  
+  /* Animated GIF background */
   .gif-background {
     background-image: url('./homepage.gif');  /* Animated GIF */
   }
   
+  /* Toggle Button with image background */
   .toggle-button {
-    position: absolute;
-    top: 50%;  /* Position it vertically in the center */
-    left: 50%;  /* Position it horizontally in the center */
-    transform: translate(-50%, -50%); /* Center the button */
-    padding: 1em 2em;
-    font-size: 1.2em;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    position: absolute;  /* Use absolute positioning */
+    top: 7%;  /* Position the button 5% from the top of the container */
+    right: 16%;  /* Position the button 5% from the right of the container (adjust to change position) */
+    background-image: url('./flower.gif'); /* Set the GIF as the button background */
+    background-size: cover;  /* Ensure both the button and background GIFs have the same size */
+    background-position: center;  /* Center the GIF inside the button */
+    background-repeat: no-repeat;  /* Prevent the GIF from repeating */
+    border: none;  /* Remove default border */
+    width: 21%;  /* Set a fixed width for the button */
+    height: 38%; /* Set a fixed height for the button */
+    color: transparent;  /* Make text invisible */
+    cursor: pointer;  /* Pointer cursor on hover */
+    transition: opacity 0.3s ease;  /* Optional: smooth hover effect */
+    z-index: 9999; /* Ensure the button stays on top of other content */
   }
   
   .toggle-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8; /* Optional: reduce opacity on hover */
   }
- 
+  
+  /* White section styling for the next part of the page */
+  .white-section {
+    background-color: white;  /* White background */
+    padding: 20px;
+    text-align: center;
+  }
+  
+   
+  

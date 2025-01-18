@@ -1,50 +1,73 @@
-/* Ensure navbar stays on top */
+/* Ensure navbar stays on top, has a gradient background, and words aligned to the right */
 nav {
     display: flex;
-    justify-content: space-between;
-    
-    position: fixed; /* Make the navbar fixed */
-    top: 2%;
-    left: 0;
-    width: 100%;
-    
-    z-index: 9999; /* Keep navbar on top */
-    
-  }
-  
-  
-  div{
-    
-  }
-  
-  #logo {
+    justify-content: space-between; /* Align the content to the right */
     margin:0;
-    padding-left: 0;
+    position: fixed;  /* Fix the navbar at the top */
+    top: 0;  /* Remove any gap at the top */
+    right: 0;  /* Align navbar to the right */
+    width: 100%;  /* Make the navbar take the full width of the screen */
+    z-index: 9999;  /* Ensure navbar stays on top of other content *  /* Add padding around the navbar */
+    box-sizing: border-box;  /* Include padding in the total width/height calculation */
+    
+  }
+
+  #logo{
+    position: left;
+    margin: 0;
+    padding: 0;
+  }
+  #logo:hover{
+    background-color: rgba(35, 63, 129, 0.431);
+    position: left;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px; 
   }
   
+  /* Style for the navbar links */
   #navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start; /* Align menu items to the left */
     align-items: center;
-    margin-right: 3%;
-    list-style: none;
-    box-sizing: border-box;
-    background-color: white; 
-    padding: 0.5rem 0;
+    margin: 0;
+    list-style: none;  /* Remove bullet points */
+    width: 100%;  /* Make navbar stretch across the entire screen */
+    background-color: transparent;  /* Ensure navbar has no default background color */
+    padding: 0 20px;  /* Add some horizontal padding around the navbar items */
+    z-index: 9998;  /* Keep navbar text in front of other content but behind the navbar container */
+    background: white;  /* 60% transparent, 40% white */
+    border-radius: 20px; 
   }
   
+  /* Style for each menu item */
   #navbar li {
-    padding: 0 3%;
+    padding: 0 15px;  /* Add space between the links */
   }
   
+  /* Style for the links inside the navbar */
   #navbar li a {
     text-decoration: none;
     font-size: 1.8rem;
     font-weight: 600;
-    color: black;
+    color: black;  /* Text color */
+  background-color: linear-gradient(to right, transparent 20%, white 80%); /* Background color for the text */
+  padding: 10px 20px;  /* Padding to extend the background */
+  background-clip: padding-box;  /* Ensures the background only fills the padded area */
   }
   
+  
   #navbar li a:hover {
-    color: #f0a500;
-  }
+    /*color: #f0a500;  /* Color change on hover */
+    background-color: rgba(124, 122, 124, 0.458);
+    border-bottom-color: rgb(0, 51, 117);
+}
+
+#navbar li a{
+    
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.125em;
+    transition: border-bottom-color 50ms linear 0s;
+}
+
   
